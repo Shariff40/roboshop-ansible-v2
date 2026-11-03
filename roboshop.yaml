@@ -58,7 +58,7 @@
     loop: "{{ instances }}"
     when: instance_action == "delete"
 
-    - name: delete r53 record for frontend
+  - name: delete r53 record for frontend
     amazon.aws.route53:
      state: absent
      zone: "{{ domain_name }}"
