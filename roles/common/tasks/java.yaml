@@ -11,12 +11,12 @@
     state: present
 
 
-- name: build shipping
+- name: build {{ component }} application
   command: mvn clean package
     args:
     chdir: /app
          
-- name: move shipping jar file
-  command: mv target/shipping.jar shipping.jar
+- name: move {{ component }} jar file
+  command: mv target/{{ component }}.jar {{ component }}.jar
     args:
     chdir: /app
