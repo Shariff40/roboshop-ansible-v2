@@ -13,7 +13,7 @@
 
 - name: build {{ component }} application
   command: mvn clean package
-    args:
+  args:
     chdir: /app
          
 - name: move {{ component }} jar file
